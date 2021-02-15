@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import os
 from discord.ext import commands
 
 client = discord.Client()
@@ -31,5 +32,5 @@ async def mn(ctx):
   await ctx.send(embed=embed)
 
 
-
-bot.run('Nzk2OTI0NDE5NjYyMDIwNjA5.X_e_sw.P31uX4EO3dnzHHC9KrXf-X6NXoA')
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
